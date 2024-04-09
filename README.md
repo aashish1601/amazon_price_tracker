@@ -13,3 +13,14 @@ When the price drops below the threshold, users receive email alerts with the pr
 Product Information: 
 
 The application scrapes the product title, current price, description, and image from the Amazon page.
+
+Technologies Used
+
+Python
+Flask
+BeautifulSoup
+Email functionality (smtplib, ssl)
+HTML/CSS for frontend
+
+Contributors
+Aashish Mhaske
