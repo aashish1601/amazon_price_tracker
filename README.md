@@ -14,13 +14,18 @@ Product Information:
 
 The application scrapes the product title, current price, description, and image from the Amazon page.
 
-Technologies Used
+Technologies Used:-
 
 Python
+
 Flask
+
 BeautifulSoup
+
 Email functionality (smtplib, ssl)
+
 HTML/CSS for frontend
 
 Contributors
+
 Aashish Mhaske
