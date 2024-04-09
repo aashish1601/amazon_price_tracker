@@ -1,4 +1,5 @@
 Overview
+
 The Amazon Price Tracker is a web application built using Flask, BeautifulSoup, and email functionality. It allows users to track the prices of products on Amazon and receive email notifications when prices drop below a specified threshold.
 
 Features
