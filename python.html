@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Price Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .product-info {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .product-info img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amazon Price Tracker</h1>
+        <form method="POST">
+            <label for="amazon_url">Amazon URL:</label>
+            <input type="text" id="amazon_url" name="amazon_url" required><br><br>
+
+            <label for="threshold_price">Threshold Price:</label>
+            <input type="number" id="threshold_price" name="threshold_price" required><br><br>
+
+            <label for="receiver_email">Receiver Email:</label>
+            <input type="email" id="receiver_email" name="receiver_email" required><br><br>
+
+            <button type="submit">Track Price</button>
+        </form>
+        {% if product_info %}
+        <div class="product-info">
+            <h2>{{ product_info.title }}</h2>
+            <p><strong>Price:</strong> {{ product_info.price }}</p>
+            <p><strong>Description:</strong> {{ product_info.description }}</p>
+            {% if product_info.image_url %}
+                <img src="{{ product_info.image_url }}" alt="Product Image">
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
